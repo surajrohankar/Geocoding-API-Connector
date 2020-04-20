@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:geocoding-api="http://www.mulesoft.org/schema/mule/geocoding-api"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/geocoding-api http://www.mulesoft.org/schema/mule/geocoding-api/current/mule-geocoding-api.xsd">
+
+    <geocoding-api:config name="config" configId="configId">
+        <geocoding-api:connection requiredParameter="aValue" />
+    </geocoding-api:config>
+
+    <flow name="sayHiFlow">
+        <geocoding-api:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <geocoding-api:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
