@@ -1,14 +1,5 @@
 # Geocoding API Extension
 
-Add description ...
-
-
-...
-
-
-...
-
-
 Add this dependency to your application pom.xml
 
 ```
